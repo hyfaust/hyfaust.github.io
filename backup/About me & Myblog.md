@@ -1,4 +1,4 @@
-My email: hyfaust@163.com
+📧 My email: hyfaust@163.com
 
 > [!TIP]
 > Labels说明：
