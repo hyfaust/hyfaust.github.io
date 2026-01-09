@@ -1,5 +1,53 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Faust's Archive  </title><link>https://hyfaust.github.io</link><description>As I trashed all yesterdays, my step becomes lighter。</description><copyright>Faust's Archive  </copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/247273453?s=96&amp;v=4</url><title>avatar</title><link>https://hyfaust.github.io</link></image><lastBuildDate>Mon, 08 Dec 2025 15:28:12 +0000</lastBuildDate><managingEditor>Faust's Archive  </managingEditor><ttl>60</ttl><webMaster>Faust's Archive  </webMaster><item><title>Test</title><link>https://hyfaust.github.io/post/Test.html</link><description>I am a big fool。</description><guid isPermaLink="true">https://hyfaust.github.io/post/Test.html</guid><pubDate>Tue, 02 Dec 2025 02:49:20 +0000</pubDate></item><item><title>My recommend</title><link>https://hyfaust.github.io/link.html</link><description>## 🎵 Music
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Faust's Archive  </title><link>https://hyfaust.github.io</link><description>As I trashed all yesterdays, my step becomes lighter。</description><copyright>Faust's Archive  </copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/247273453?s=96&amp;v=4</url><title>avatar</title><link>https://hyfaust.github.io</link></image><lastBuildDate>Fri, 09 Jan 2026 08:45:29 +0000</lastBuildDate><managingEditor>Faust's Archive  </managingEditor><ttl>60</ttl><webMaster>Faust's Archive  </webMaster><item><title>Pytorch安装及配置</title><link>https://hyfaust.github.io/post/Pytorch-an-zhuang-ji-pei-zhi.html</link><description> #python/pytorch
+## CPU版本torch（eg.动手深度学习）
+```python
+pip install torch==1.12.0  
+pip install torchvision==0.13.0
+pip install d2l==0.17.6
+```
+
+## PyTorch gpu版本安装及Notebook使用虚拟环境的方法
+### 安装CUDA并检查
+```python
+nvidia-smi #查询信息，得知最高CUDA版本（实装12.8）
+nvcc -V  #安装完成后检查信息
+#可将DNN模块解压至C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin加速运算
+```
+### 虚拟环境配置及相关软件安装
+```python
+conda create --name gputorch python==3.11 -y #创建环境
+pip install torch==2.7.1 torchvision torchaudio -f https://mirrors.aliyun.com/pytorch-wheels/cu128/
+conda install jupyter notebook #安装notebook或者jupyterlab，conda或pip安装均可
+#conda install jupyterlab
+#安装完成后进入python检查torch和CUDA
+python
+import torch
+print(torch.__version__)
+print(torch.cuda.is_available())
+print(torch.backends.cudnn.version())
+```
+### Base环境的Notebook使用其它虚拟环境的方法
+```bash
+conda install ipykernel #在对应环境下安装ipykernel,已安装notebook则无需再安装
+conda deacitvate #退出至base环境
+conda install nb_conda_kernels #内核配置管理
+jupyter notebook #kernels很多的时候还是用VScode里的插件吧
+```
+### conda换源
+```bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+```
+## Jupyter notebook 和 lab 快捷方式属性
+```powershell
+E:\ProgramData\Miniconda3\python.exe E:\ProgramData\Miniconda3\cwp.py  E:\ProgramData\Miniconda3\envs\vml E:\ProgramData\Miniconda3\envs\vml\python.exe E:\ProgramData\Miniconda3\envs\vml\Scripts\jupyter-lab-script.py 'F:\Documents\Visualize-ML'
+#conda的cwp，环境中的python，jupyterlab的启动py文件，工作目录
+
+E:\ProgramData\Miniconda3\python.exe E:\ProgramData\Miniconda3\cwp.py E:\ProgramData\Miniconda3\envs\d2l E:\ProgramData\Miniconda3\envs\d2l\python.exe E:\ProgramData\Miniconda3\envs\d2l\Scripts\jupyter-notebook-script.py 'F:\Documents\d2l-zh-2.0.0'
+#同上含义
+```。</description><guid isPermaLink="true">https://hyfaust.github.io/post/Pytorch-an-zhuang-ji-pei-zhi.html</guid><pubDate>Fri, 09 Jan 2026 08:44:54 +0000</pubDate></item><item><title>Test</title><link>https://hyfaust.github.io/post/Test.html</link><description>I am a big fool。</description><guid isPermaLink="true">https://hyfaust.github.io/post/Test.html</guid><pubDate>Tue, 02 Dec 2025 02:49:20 +0000</pubDate></item><item><title>My recommend</title><link>https://hyfaust.github.io/link.html</link><description>## 🎵 Music
 - [忘れてやらない -Concert version -喜多郁代](https://www.bilibili.com/video/BV1PZmhYpEEM/?spm_id_from=333.337.search-card.all.click&amp;vd_source=7fd0e959d7e6ba15aa45cbbf6e834921)
 
 ## 📝 Article
