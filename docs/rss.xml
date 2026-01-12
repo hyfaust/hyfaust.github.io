@@ -1,5 +1,53 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Faust's Archive  </title><link>https://hyfaust.github.io</link><description>As I trashed all yesterdays, my step becomes lighter。</description><copyright>Faust's Archive  </copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/247273453?s=96&amp;v=4</url><title>avatar</title><link>https://hyfaust.github.io</link></image><lastBuildDate>Fri, 09 Jan 2026 08:45:29 +0000</lastBuildDate><managingEditor>Faust's Archive  </managingEditor><ttl>60</ttl><webMaster>Faust's Archive  </webMaster><item><title>Pytorch安装及配置</title><link>https://hyfaust.github.io/post/Pytorch-an-zhuang-ji-pei-zhi.html</link><description> #python/pytorch
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Faust's Archive  </title><link>https://hyfaust.github.io</link><description>As I trashed all yesterdays, my step becomes lighter。</description><copyright>Faust's Archive  </copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/247273453?s=96&amp;v=4</url><title>avatar</title><link>https://hyfaust.github.io</link></image><lastBuildDate>Mon, 12 Jan 2026 02:45:36 +0000</lastBuildDate><managingEditor>Faust's Archive  </managingEditor><ttl>60</ttl><webMaster>Faust's Archive  </webMaster><item><title>SE_BGA</title><link>https://hyfaust.github.io/post/SE_BGA.html</link><description>#SE
+## BGA-1
+采用六边形棱柱作初始几何构型，固定约束上下两面及边线，恒定体积设置为圆柱的1.3倍
+## BGA-2
+为上下两个固定面添加no_refine属性以加快计算
+仅考虑表面张力的情况下，恒定体积的最终形状与张力的数值无关
+## BGA-3
+同时考虑表面张力和重力作用，故上下面应设置tension 0
+&gt; [! Uncertain]
+&gt; 仅考虑表面张力时，顶面和底面可以不设置；当同时考虑重力时，必须将其设置为0
+&gt; 严格意义上应仅在壁面，气液相界面处接触设置非零的表面张力
+
+ 采用cgs单位系统
+## **BGA-4** 
+base3 在3的基础上计算焊盘上的垂直力
+一共有7种方法，推荐linear move方法
+```c
+zforce: 24.194068467172272  (single difference, top pad only)
+zforce: 24.197468840488526  (central difference, top pad only)
+zforce: 24.583191529832973  (single difference, linear move)
+zforce: 24.583596719788638  (central difference, linear move)
+  1. area: 0.154763478044165 energy:  47.0582870000139
+  2. area: 0.154763478041577 energy:  47.0582870000139
+  3. area: 0.154763708748211 energy:  47.0583460006838
+  4. area: 0.154763708753397 energy:  47.0583460006838
+zforce: 24.583612461270828  (central difference, linear move, reconverge)
+  5. area: 0.154763593385103 energy:  47.0583164931673
+  6. area: 0.154763593382516 energy:  47.0583164931673
+zforce: 17.323186353177952  (geometric)
+zforce: 24.583607830407118  (variational integrands)
+```
+chartdata可输出不同高度和体积约束下的结果表，[数据分析](https://www.qianwen.com/share?shareId=909f4285-55f3-4bc1-ae58-8f4bf272df1e)
+在 `facet_general_integral` 的上下文中，Evolver 提供以下内置变量：
+
+| 变量            | 含义                          |
+| ------------- | --------------------------- |
+| `x1, x2, x3`  | 面上某点的坐标 (x, y, z)           |
+| `x4, x5, x6`  | **面法向向量分量**，即 n=∂u∂r​×∂v∂r​ |
+| `x7, x8, x9`  | 第一偏导 ∂r/∂u                  |
+| `x10,x11,x12` | 第二偏导 ∂r/∂v                  |
+```bash
+method_instance area_change method facet_general_integral 
+scalar_integrand: ...
+```
+定义了一个名为area_change的标量积分方法，被积函数由scalar_integrand给出，[被积函数的推导](https://www.qianwen.com/share?shareId=b45175c2-3bfa-4d12-9ce3-38e71cbb17cd)
+[三部分的推导](https://www.qianwen.com/share?shareId=3f8684c5-a4df-4ead-9fc8-7b1327d51b50)
+
+## BGA-5
+base3  with vertical load and optimizing pad height上部焊盘可移动，有一外加载荷pad_weight。</description><guid isPermaLink="true">https://hyfaust.github.io/post/SE_BGA.html</guid><pubDate>Mon, 12 Jan 2026 02:45:04 +0000</pubDate></item><item><title>Pytorch安装及配置</title><link>https://hyfaust.github.io/post/Pytorch-an-zhuang-ji-pei-zhi.html</link><description> #python/pytorch
 ## CPU版本torch（eg.动手深度学习）
 ```python
 pip install torch==1.12.0  
