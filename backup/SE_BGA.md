@@ -113,3 +113,5 @@ base30 with specified contact angle on pads.
 ~~运行时存在问题，计算不收敛~~，原输入文件中步长设置过大，将scale_limit改为0.1/S_TENSION时结果正常收敛
 参数：表面张力、密度
 高度、半径+接触角
+
+> [Ball Grid Array Example for the Surface Evolver](https://kenbrakke.com/evolver/evolver.htm)
