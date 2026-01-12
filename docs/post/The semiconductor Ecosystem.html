@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark_colorblind" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/247273453?s=96&v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="#semiconductor
+![[emi-ecosystem-detail.png|400]]
+## **The Semiconductor Ecosystem**
+Looking at the figure below, the industry seems pretty simple. Companies in the semiconductor ecosystem make chips (the triangle on the left) and sell them to companies and government agencies (on the right). Those companies and government agencies then design the chips into systems and devices (e.g. iPhones, PCs, airplanes, cloud computing, etc.), and sell them to consumers, businesses, and governments. The revenue of products that contain chips is worth tens of trillions of dollars.
+![[The Semiconductor Ecosystem.png]]
+Yet, given how large it is, the industry remains a mystery to most.  If you do think of the semiconductor industry at all, you may picture workers in bunny suits in a fab clean room (the chip factory) holding a 12” wafer. Yet it is a business that manipulates materials an atom at a time and its factories cost 10s of billions of dollars to build.  (By the way, that wafer has two _trillion_ transistors on it.)
+![[clean-room-holding-a-wafer.png]]
+If you were able to look inside the simple triangle representing the semiconductor industry, instead of a single company making chips, you would find an industry with hundreds of companies, all dependent on each other. Taken as a whole it’s pretty overwhelming, so let’s describe one part of the ecosystem at a time.  (Warning –  this is a _simplified_ view of a very complex industry.)
+## **Semiconductor Industry Segments**
+The semiconductor industry has seven different types of companies. Each of these distinct industry segments feeds its resources up the value chain to the next until finally a chip factory (a “Fab”) has all the designs, equipment, and materials necessary to manufacture a chip. Taken from the bottom up these semiconductor industry segments are:
+1. Chip Intellectual Property (IP) 
+2. Electronic Design Automation (EDA)
+3. Specialized Materials 
+4. Wafer Fab Equipment (WFE)
+5. “Fabless” Chip Companies 
+6. Integrated Device Manufacturers (IDMs)
+7. Chip Foundries
+8. Outsourced Semiconductor Assembly and Test (OSAT)
+![[semi-eco-plus-OSAT.png]]
+The following sections below provide more detail about each of these eight semiconductor industry segments.
+### **Chip Intellectual Property (IP) Cores**
+- The _design_ of a chip may be owned by a single company, or…
+- Some companies license their chip designs – as software building blocks, called IP Cores – for wide use
+- There are over 150 companies that sell chip IP Cores
+- For example, Apple licenses IP Cores from [ARM](https://www.arm.com/) as a building block of their microprocessors in their iPhones and Computers
+![[Chip-IP-cores.png]]
+### **Electronic Design Automation (EDA) Tools**
+- Engineers design chips (adding their own designs on top of any IP cores they’ve bought) using specialized Electronic Design Automation (EDA) software
+- The industry is dominated by three U.S. vendors–[Cadence](https://www.cadence.com/en_US/home.html), [Mentor](https://eda.sw.siemens.com/en-US/) (now part of Siemens) and [Synopsys](https://www.synopsys.com/)
+- It takes a large engineering team using these EDA tools 2-3 years to design a complex logic chip like a microprocessor used inside a phone, computer or server. (See the figure of the design process below.)
+  ![[EDA-Design-flow.png]]
+-  Today, as logic chips continue to become more complex, all Electronic Design Automation companies are beginning to insert Artificial Intelligence aids to automate and speed up the process
+![[EDA-tools.png]]
+### **Specialized Materials and Chemicals**
+So far our chip is still in software. But to turn it into something tangible we’re going to have to physically produce it in a chip factory called a “fab.” The factories that make chips need to buy specialized materials and chemicals:
+
+- Silicon wafers – and to make those they need crystal growing furnaces
+- [Over 100 Gases](https://www.linde-gas.com/en/images/Gasworld%20-%20Creating%20a%20Semiconductor%20FEB18_tcm17-477345.pdf) are used – bulk gases (oxygen, nitrogen, carbon dioxide, hydrogen, argon, helium), and other exotic/toxic gases (fluorine, nitrogen trifluoride, arsine, phosphine, boron trifluoride, diborane, silane, and the list goes on…)
+- Fluids ([photoresists](https://en.wikipedia.org/wiki/Photoresist), top coats, [CMP slurries](https://www.surfaceconditioning.saint-gobain.com/news/choosing-best-cmp-slurry))
+- [Photomasks](https://en.wikipedia.org/wiki/Photomask)
+- Wafer handling equipment, dicing
+- [RF Generators](https://www.microwavejournal.com/articles/21140-rf-technology-in-semiconductor-wafer-processing)
+![[materials-small.png]]
+### **Wafer Fab Equipment (WFE) Make the Chips**
+- These machines physically manufacture the chips
+- Five companies dominate the industry– [Applied Materials](https://www.appliedmaterials.com/), [KLA](https://www.kla.com/), [LAM](https://www.lamresearch.com/), [Tokyo Electron](https://www.tel.com/) and [ASML](https://www.asml.com/en)
+- These are some of the most complicated (and expensive) machines on Earth. They take a slice of an ingot of silicon and manipulate its atoms on and below its surface
+- We’ll explain how these machines are used a bit later on
+![[Wafer-Fab-Equipment.png]]
+###  **“Fabless” Chip Companies**
+- Systems companies (Apple, Qualcomm, Nvidia, Amazon, Facebook, etc.) that previously used off-the-shelf chips now design their own chips.
+- They create chip designs (using IP Cores and their own designs) and send the designs to “foundries” that have “fabs” that manufacture them
+- They may use the chips exclusively in their own devices e.g. Apple, Google, Amazon ….
+- Or they may sell the chips to everyone e.g. AMD, Nvidia, Qualcomm, Broadcom…
+- They do not own Wafer Fab Equipment or use specialized materials or chemicals
+- They do use Chip IP and Electronic Design Software to design the chips
+![[fabless.png]]
+### **Integrated Device Manufacturers (IDMs)**
+- Integrated Device Manufacturers (IDMs) design, manufacture (in their own fabs), and sell _their own_ chips
+    - They do not make chips for other companies (this is changing rapidly – see [here](https://stratechery.com/2022/the-intel-split/).)
+    - There are three categories of IDMs– Memory (e.g. [Micron](https://www.micron.com/), [SK Hynix](https://product.skhynix.com/home.go)), Logic (e.g. [Intel](http://www.intel.com/)), Analog ([TI](https://www.ti.com/), [Analog Devices](https://www.analog.com/en/index.html))
+- They have their own “fabs” but may also use foundries
+    - They use Chip IP and Electronic Design Software to design their chips
+    - They buy Wafer Fab Equipment and use specialized materials and chemicals
+- The average cost of taping out a new leading-edge chip (3nm) is now $500 million
+![[IDMs.png]]
+###  **Chip Foundries**
+- Foundries make chips for others in their “fabs”
+- They buy and integrate equipment from a variety of manufacturers
+    - Wafer Fab Equipment and specialized materials and chemicals
+- They design unique processes using this equipment to _make_ the chips
+- But they _don’t design chips_
+- [TSMC](https://www.tsmc.com/english) in Taiwan is the leader in logic, [Samsung](https://www.samsung.com/semiconductor/) is second
+- Other fabs specialize in making chips for analog, power, rf, displays, secure military, etc.
+- It costs $20 billon to build a new generation chip (3nm) fabrication plant
+![[foundries.png]]
+#### **Fabs**
+- Fabs are short for fabrication plants – the factory that makes chips
+- Integrated Device Manufacturers (IDMs) _and_ Foundries both have fabs. The only difference is whether they make chips for others to use or sell or make them for themselves to sell.
+- Think of a Fab as analogous to a book printing plant (see figure below)
+1. Just as an author writes a book using a word processor, an engineer designs a chip using electronic design automation tools
+2. An author contracts with a publisher who specializes in their genre and then sends the text to a printing plant. An engineer selects a fab appropriate for their type of chip (memory, logic, RF, analog)
+3. The printing plant buys paper and ink. A fab buys raw materials; silicon, chemicals, gases
+4. The printing plant buys printing machinery, presses, binders, trimmers. The fab buys wafer fab equipment, etchers, deposition, lithography, testers, packaging
+5. The printing process for a book uses offset lithography, filming, stripping, blueprints, plate making, binding and trimming. Chips are manufactured in a complicated process manipulating atoms using etchers, deposition, lithography. Think of it as an atomic level offset printing. The wafers are then cut up and the chips are packaged
+6. The plant turns out millions of copies of the same book. The plant turns out millions of copies of the same chip
+![[printing.png]]
+While this sounds simple, it’s not. Chips are probably the most complicated products ever manufactured.  The diagram below is a simplified version of the _1000+_ steps it takes to make a chip.
+![[Chip-fab-steps.png]]
+### Outsourced Semiconductor Assembly and Test (OSAT)
+- Companies that package and test chips made by foundries and IDMs
+- OSAT companies take the wafer made by foundries, dice (cut) them up into individual chips, test them and then package them and ship them to the customer
+![[OSAT.png]]
+## **Fab Issues**
+- As chips have become denser (with trillions of transistors on a single wafer) the cost of building fabs have skyrocketed – now >$10 billion for one chip factory
+- One reason is that the cost of the equipment needed to make the chips has skyrocketed
+    - Just one advanced lithography machine from [ASML](https://www.asml.com/en), a Dutch company, costs $150 million
+    - There are ~500+ machines in a fab (not all as expensive as ASML)
+    - The fab building is incredibly complex. The clean room where the chips are made is just the tip of the iceberg of a complex set of plumbing feeding gases, power, liquids all at the right time and temperature into the wafer fab equipment
+- The multi-billion-dollar cost of staying at the leading edge has meant most companies have dropped out. In 2001 there were 17 companies making the most advanced chips.  Today there are only two – [Samsung](https://www.samsung.com/semiconductor/) in Korea and [TSMC](https://www.tsmc.com/english) in Taiwan.
+    - Given that China believes Taiwan is a province of China this could be problematic for the West.
+![[companies-at-leading-edge.png]]
+## **What’s Next – Technology**
+It’s getting much harder to build chips that are denser, faster, and use less power, so what’s next?
+- Instead of making a single processor do all the work, logic chip designers have put multiple specialized processors inside of a chip
+- Memory chips are now made denser by stacking them 100+ layers high
+- As chips are getting more complex to design, which means larger design teams, and longer time to market, Electronic Design Automation companies are embedding artificial intelligence to automate parts of the design process
+- Wafer equipment manufacturers are designing new equipment to help fabs make chips with lower power, better [performance, optimum area-to-cost, and faster time to market](https://drive.google.com/file/d/10iOkW6LfURNLND8z61eXbDx_Y-8jkBRr/view?usp=sharing)
+## **What’s Next – Business**
+The business model of Integrated Device Manufacturers (IDMs) like [Intel](http://www.intel.com/) is rapidly changing. In the past there was a huge competitive advantage in being vertically integrated i.e. having your own design tools and fabs. Today, it’s a disadvantage.
+
+- Foundries have economies of scale and standardization. Rather than having to invent it all themselves, they can utilize the entire stack of innovation in the ecosystem. And just focus on manufacturing
+- [AMD](https://www.amd.com/en) has proven that it’s possible to shift from an IDM to a fabless foundry model. [Intel](http://www.intel.com/) is trying. They are going to use [TSMC](https://www.tsmc.com/english) as a foundry for their own chips as well as set up their own foundry
+## **What’s Next – Geopolitics**
+Controlling advanced chip manufacturing in the 21st century may well prove to be like controlling the oil supply in the 20th. The country that controls this manufacturing can throttle the military and economic power of others.
+- Ensuring a steady supply of chips has become a national priority. (China’s largest import by $’s are semiconductors – larger than oil)
+- Today, both the U.S. and [China](https://www.semiconductors.org/chinas-share-of-global-chip-sales-now-surpasses-taiwan-closing-in-on-europe-and-japan/) are rapidly trying to decouple their semiconductor ecosystems from each other; China is pouring $100+ billion of government incentives in building Chinese fabs, while simultaneously trying to create indigenous supplies of wafer fab equipment and electronic design automation software
+- Over the last few decades the U.S. moved most of its fabs to Asia. Today we are incentivizing bringing fabs and chip production back to the U.S.
+An industry that previously was only of interest to technologists is now one of the largest pieces in great power competition.
+
+>  [Steve Blank The Semiconductor Ecosystem – Explained](https://steveblank.com/2022/01/25/the-semiconductor-ecosystem/)。">
+<meta property="og:title" content="The semiconductor Ecosystem">
+<meta property="og:description" content="#semiconductor
+![[emi-ecosystem-detail.png|400]]
+## **The Semiconductor Ecosystem**
+Looking at the figure below, the industry seems pretty simple. Companies in the semiconductor ecosystem make chips (the triangle on the left) and sell them to companies and government agencies (on the right). Those companies and government agencies then design the chips into systems and devices (e.g. iPhones, PCs, airplanes, cloud computing, etc.), and sell them to consumers, businesses, and governments. The revenue of products that contain chips is worth tens of trillions of dollars.
+![[The Semiconductor Ecosystem.png]]
+Yet, given how large it is, the industry remains a mystery to most.  If you do think of the semiconductor industry at all, you may picture workers in bunny suits in a fab clean room (the chip factory) holding a 12” wafer. Yet it is a business that manipulates materials an atom at a time and its factories cost 10s of billions of dollars to build.  (By the way, that wafer has two _trillion_ transistors on it.)
+![[clean-room-holding-a-wafer.png]]
+If you were able to look inside the simple triangle representing the semiconductor industry, instead of a single company making chips, you would find an industry with hundreds of companies, all dependent on each other. Taken as a whole it’s pretty overwhelming, so let’s describe one part of the ecosystem at a time.  (Warning –  this is a _simplified_ view of a very complex industry.)
+## **Semiconductor Industry Segments**
+The semiconductor industry has seven different types of companies. Each of these distinct industry segments feeds its resources up the value chain to the next until finally a chip factory (a “Fab”) has all the designs, equipment, and materials necessary to manufacture a chip. Taken from the bottom up these semiconductor industry segments are:
+1. Chip Intellectual Property (IP) 
+2. Electronic Design Automation (EDA)
+3. Specialized Materials 
+4. Wafer Fab Equipment (WFE)
+5. “Fabless” Chip Companies 
+6. Integrated Device Manufacturers (IDMs)
+7. Chip Foundries
+8. Outsourced Semiconductor Assembly and Test (OSAT)
+![[semi-eco-plus-OSAT.png]]
+The following sections below provide more detail about each of these eight semiconductor industry segments.
+### **Chip Intellectual Property (IP) Cores**
+- The _design_ of a chip may be owned by a single company, or…
+- Some companies license their chip designs – as software building blocks, called IP Cores – for wide use
+- There are over 150 companies that sell chip IP Cores
+- For example, Apple licenses IP Cores from [ARM](https://www.arm.com/) as a building block of their microprocessors in their iPhones and Computers
+![[Chip-IP-cores.png]]
+### **Electronic Design Automation (EDA) Tools**
+- Engineers design chips (adding their own designs on top of any IP cores they’ve bought) using specialized Electronic Design Automation (EDA) software
+- The industry is dominated by three U.S. vendors–[Cadence](https://www.cadence.com/en_US/home.html), [Mentor](https://eda.sw.siemens.com/en-US/) (now part of Siemens) and [Synopsys](https://www.synopsys.com/)
+- It takes a large engineering team using these EDA tools 2-3 years to design a complex logic chip like a microprocessor used inside a phone, computer or server. (See the figure of the design process below.)
+  ![[EDA-Design-flow.png]]
+-  Today, as logic chips continue to become more complex, all Electronic Design Automation companies are beginning to insert Artificial Intelligence aids to automate and speed up the process
+![[EDA-tools.png]]
+### **Specialized Materials and Chemicals**
+So far our chip is still in software. But to turn it into something tangible we’re going to have to physically produce it in a chip factory called a “fab.” The factories that make chips need to buy specialized materials and chemicals:
+
+- Silicon wafers – and to make those they need crystal growing furnaces
+- [Over 100 Gases](https://www.linde-gas.com/en/images/Gasworld%20-%20Creating%20a%20Semiconductor%20FEB18_tcm17-477345.pdf) are used – bulk gases (oxygen, nitrogen, carbon dioxide, hydrogen, argon, helium), and other exotic/toxic gases (fluorine, nitrogen trifluoride, arsine, phosphine, boron trifluoride, diborane, silane, and the list goes on…)
+- Fluids ([photoresists](https://en.wikipedia.org/wiki/Photoresist), top coats, [CMP slurries](https://www.surfaceconditioning.saint-gobain.com/news/choosing-best-cmp-slurry))
+- [Photomasks](https://en.wikipedia.org/wiki/Photomask)
+- Wafer handling equipment, dicing
+- [RF Generators](https://www.microwavejournal.com/articles/21140-rf-technology-in-semiconductor-wafer-processing)
+![[materials-small.png]]
+### **Wafer Fab Equipment (WFE) Make the Chips**
+- These machines physically manufacture the chips
+- Five companies dominate the industry– [Applied Materials](https://www.appliedmaterials.com/), [KLA](https://www.kla.com/), [LAM](https://www.lamresearch.com/), [Tokyo Electron](https://www.tel.com/) and [ASML](https://www.asml.com/en)
+- These are some of the most complicated (and expensive) machines on Earth. They take a slice of an ingot of silicon and manipulate its atoms on and below its surface
+- We’ll explain how these machines are used a bit later on
+![[Wafer-Fab-Equipment.png]]
+###  **“Fabless” Chip Companies**
+- Systems companies (Apple, Qualcomm, Nvidia, Amazon, Facebook, etc.) that previously used off-the-shelf chips now design their own chips.
+- They create chip designs (using IP Cores and their own designs) and send the designs to “foundries” that have “fabs” that manufacture them
+- They may use the chips exclusively in their own devices e.g. Apple, Google, Amazon ….
+- Or they may sell the chips to everyone e.g. AMD, Nvidia, Qualcomm, Broadcom…
+- They do not own Wafer Fab Equipment or use specialized materials or chemicals
+- They do use Chip IP and Electronic Design Software to design the chips
+![[fabless.png]]
+### **Integrated Device Manufacturers (IDMs)**
+- Integrated Device Manufacturers (IDMs) design, manufacture (in their own fabs), and sell _their own_ chips
+    - They do not make chips for other companies (this is changing rapidly – see [here](https://stratechery.com/2022/the-intel-split/).)
+    - There are three categories of IDMs– Memory (e.g. [Micron](https://www.micron.com/), [SK Hynix](https://product.skhynix.com/home.go)), Logic (e.g. [Intel](http://www.intel.com/)), Analog ([TI](https://www.ti.com/), [Analog Devices](https://www.analog.com/en/index.html))
+- They have their own “fabs” but may also use foundries
+    - They use Chip IP and Electronic Design Software to design their chips
+    - They buy Wafer Fab Equipment and use specialized materials and chemicals
+- The average cost of taping out a new leading-edge chip (3nm) is now $500 million
+![[IDMs.png]]
+###  **Chip Foundries**
+- Foundries make chips for others in their “fabs”
+- They buy and integrate equipment from a variety of manufacturers
+    - Wafer Fab Equipment and specialized materials and chemicals
+- They design unique processes using this equipment to _make_ the chips
+- But they _don’t design chips_
+- [TSMC](https://www.tsmc.com/english) in Taiwan is the leader in logic, [Samsung](https://www.samsung.com/semiconductor/) is second
+- Other fabs specialize in making chips for analog, power, rf, displays, secure military, etc.
+- It costs $20 billon to build a new generation chip (3nm) fabrication plant
+![[foundries.png]]
+#### **Fabs**
+- Fabs are short for fabrication plants – the factory that makes chips
+- Integrated Device Manufacturers (IDMs) _and_ Foundries both have fabs. The only difference is whether they make chips for others to use or sell or make them for themselves to sell.
+- Think of a Fab as analogous to a book printing plant (see figure below)
+1. Just as an author writes a book using a word processor, an engineer designs a chip using electronic design automation tools
+2. An author contracts with a publisher who specializes in their genre and then sends the text to a printing plant. An engineer selects a fab appropriate for their type of chip (memory, logic, RF, analog)
+3. The printing plant buys paper and ink. A fab buys raw materials; silicon, chemicals, gases
+4. The printing plant buys printing machinery, presses, binders, trimmers. The fab buys wafer fab equipment, etchers, deposition, lithography, testers, packaging
+5. The printing process for a book uses offset lithography, filming, stripping, blueprints, plate making, binding and trimming. Chips are manufactured in a complicated process manipulating atoms using etchers, deposition, lithography. Think of it as an atomic level offset printing. The wafers are then cut up and the chips are packaged
+6. The plant turns out millions of copies of the same book. The plant turns out millions of copies of the same chip
+![[printing.png]]
+While this sounds simple, it’s not. Chips are probably the most complicated products ever manufactured.  The diagram below is a simplified version of the _1000+_ steps it takes to make a chip.
+![[Chip-fab-steps.png]]
+### Outsourced Semiconductor Assembly and Test (OSAT)
+- Companies that package and test chips made by foundries and IDMs
+- OSAT companies take the wafer made by foundries, dice (cut) them up into individual chips, test them and then package them and ship them to the customer
+![[OSAT.png]]
+## **Fab Issues**
+- As chips have become denser (with trillions of transistors on a single wafer) the cost of building fabs have skyrocketed – now >$10 billion for one chip factory
+- One reason is that the cost of the equipment needed to make the chips has skyrocketed
+    - Just one advanced lithography machine from [ASML](https://www.asml.com/en), a Dutch company, costs $150 million
+    - There are ~500+ machines in a fab (not all as expensive as ASML)
+    - The fab building is incredibly complex. The clean room where the chips are made is just the tip of the iceberg of a complex set of plumbing feeding gases, power, liquids all at the right time and temperature into the wafer fab equipment
+- The multi-billion-dollar cost of staying at the leading edge has meant most companies have dropped out. In 2001 there were 17 companies making the most advanced chips.  Today there are only two – [Samsung](https://www.samsung.com/semiconductor/) in Korea and [TSMC](https://www.tsmc.com/english) in Taiwan.
+    - Given that China believes Taiwan is a province of China this could be problematic for the West.
+![[companies-at-leading-edge.png]]
+## **What’s Next – Technology**
+It’s getting much harder to build chips that are denser, faster, and use less power, so what’s next?
+- Instead of making a single processor do all the work, logic chip designers have put multiple specialized processors inside of a chip
+- Memory chips are now made denser by stacking them 100+ layers high
+- As chips are getting more complex to design, which means larger design teams, and longer time to market, Electronic Design Automation companies are embedding artificial intelligence to automate parts of the design process
+- Wafer equipment manufacturers are designing new equipment to help fabs make chips with lower power, better [performance, optimum area-to-cost, and faster time to market](https://drive.google.com/file/d/10iOkW6LfURNLND8z61eXbDx_Y-8jkBRr/view?usp=sharing)
+## **What’s Next – Business**
+The business model of Integrated Device Manufacturers (IDMs) like [Intel](http://www.intel.com/) is rapidly changing. In the past there was a huge competitive advantage in being vertically integrated i.e. having your own design tools and fabs. Today, it’s a disadvantage.
+
+- Foundries have economies of scale and standardization. Rather than having to invent it all themselves, they can utilize the entire stack of innovation in the ecosystem. And just focus on manufacturing
+- [AMD](https://www.amd.com/en) has proven that it’s possible to shift from an IDM to a fabless foundry model. [Intel](http://www.intel.com/) is trying. They are going to use [TSMC](https://www.tsmc.com/english) as a foundry for their own chips as well as set up their own foundry
+## **What’s Next – Geopolitics**
+Controlling advanced chip manufacturing in the 21st century may well prove to be like controlling the oil supply in the 20th. The country that controls this manufacturing can throttle the military and economic power of others.
+- Ensuring a steady supply of chips has become a national priority. (China’s largest import by $’s are semiconductors – larger than oil)
+- Today, both the U.S. and [China](https://www.semiconductors.org/chinas-share-of-global-chip-sales-now-surpasses-taiwan-closing-in-on-europe-and-japan/) are rapidly trying to decouple their semiconductor ecosystems from each other; China is pouring $100+ billion of government incentives in building Chinese fabs, while simultaneously trying to create indigenous supplies of wafer fab equipment and electronic design automation software
+- Over the last few decades the U.S. moved most of its fabs to Asia. Today we are incentivizing bringing fabs and chip production back to the U.S.
+An industry that previously was only of interest to technologists is now one of the largest pieces in great power competition.
+
+>  [Steve Blank The Semiconductor Ecosystem – Explained](https://steveblank.com/2022/01/25/the-semiconductor-ecosystem/)。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hyfaust.github.io/post/The%20semiconductor%20Ecosystem.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/247273453?s=96&v=4">
+<title>The semiconductor Ecosystem</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">The semiconductor Ecosystem</h1>
+<div class="title-right">
+    <a href="https://hyfaust.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>#semiconductor<br>
+![[emi-ecosystem-detail.png|400]]</p>
+<h2><strong>The Semiconductor Ecosystem</strong></h2>
+<p>Looking at the figure below, the industry seems pretty simple. Companies in the semiconductor ecosystem make chips (the triangle on the left) and sell them to companies and government agencies (on the right). Those companies and government agencies then design the chips into systems and devices (e.g. iPhones, PCs, airplanes, cloud computing, etc.), and sell them to consumers, businesses, and governments. The revenue of products that contain chips is worth tens of trillions of dollars.<br>
+![[The Semiconductor Ecosystem.png]]<br>
+Yet, given how large it is, the industry remains a mystery to most.  If you do think of the semiconductor industry at all, you may picture workers in bunny suits in a fab clean room (the chip factory) holding a 12” wafer. Yet it is a business that manipulates materials an atom at a time and its factories cost 10s of billions of dollars to build.  (By the way, that wafer has two <em>trillion</em> transistors on it.)<br>
+![[clean-room-holding-a-wafer.png]]<br>
+If you were able to look inside the simple triangle representing the semiconductor industry, instead of a single company making chips, you would find an industry with hundreds of companies, all dependent on each other. Taken as a whole it’s pretty overwhelming, so let’s describe one part of the ecosystem at a time.  (Warning –  this is a <em>simplified</em> view of a very complex industry.)</p>
+<h2><strong>Semiconductor Industry Segments</strong></h2>
+<p>The semiconductor industry has seven different types of companies. Each of these distinct industry segments feeds its resources up the value chain to the next until finally a chip factory (a “Fab”) has all the designs, equipment, and materials necessary to manufacture a chip. Taken from the bottom up these semiconductor industry segments are:</p>
+<ol>
+<li>Chip Intellectual Property (IP)</li>
+<li>Electronic Design Automation (EDA)</li>
+<li>Specialized Materials </li>
+<li>Wafer Fab Equipment (WFE)</li>
+<li>“Fabless” Chip Companies </li>
+<li>Integrated Device Manufacturers (IDMs)</li>
+<li>Chip Foundries</li>
+<li>Outsourced Semiconductor Assembly and Test (OSAT)<br>
+![[semi-eco-plus-OSAT.png]]<br>
+The following sections below provide more detail about each of these eight semiconductor industry segments.</li>
+</ol>
+<h3><strong>Chip Intellectual Property (IP) Cores</strong></h3>
+<ul>
+<li>The <em>design</em> of a chip may be owned by a single company, or…</li>
+<li>Some companies license their chip designs – as software building blocks, called IP Cores – for wide use</li>
+<li>There are over 150 companies that sell chip IP Cores</li>
+<li>For example, Apple licenses IP Cores from <a href="https://www.arm.com/" rel="nofollow">ARM</a> as a building block of their microprocessors in their iPhones and Computers<br>
+![[Chip-IP-cores.png]]</li>
+</ul>
+<h3><strong>Electronic Design Automation (EDA) Tools</strong></h3>
+<ul>
+<li>Engineers design chips (adding their own designs on top of any IP cores they’ve bought) using specialized Electronic Design Automation (EDA) software</li>
+<li>The industry is dominated by three U.S. vendors–<a href="https://www.cadence.com/en_US/home.html" rel="nofollow">Cadence</a>, <a href="https://eda.sw.siemens.com/en-US/" rel="nofollow">Mentor</a> (now part of Siemens) and <a href="https://www.synopsys.com/" rel="nofollow">Synopsys</a></li>
+<li>It takes a large engineering team using these EDA tools 2-3 years to design a complex logic chip like a microprocessor used inside a phone, computer or server. (See the figure of the design process below.)<br>
+![[EDA-Design-flow.png]]</li>
+<li>Today, as logic chips continue to become more complex, all Electronic Design Automation companies are beginning to insert Artificial Intelligence aids to automate and speed up the process<br>
+![[EDA-tools.png]]</li>
+</ul>
+<h3><strong>Specialized Materials and Chemicals</strong></h3>
+<p>So far our chip is still in software. But to turn it into something tangible we’re going to have to physically produce it in a chip factory called a “fab.” The factories that make chips need to buy specialized materials and chemicals:</p>
+<ul>
+<li>Silicon wafers – and to make those they need crystal growing furnaces</li>
+<li><a href="https://www.linde-gas.com/en/images/Gasworld%20-%20Creating%20a%20Semiconductor%20FEB18_tcm17-477345.pdf" rel="nofollow">Over 100 Gases</a> are used – bulk gases (oxygen, nitrogen, carbon dioxide, hydrogen, argon, helium), and other exotic/toxic gases (fluorine, nitrogen trifluoride, arsine, phosphine, boron trifluoride, diborane, silane, and the list goes on…)</li>
+<li>Fluids (<a href="https://en.wikipedia.org/wiki/Photoresist" rel="nofollow">photoresists</a>, top coats, <a href="https://www.surfaceconditioning.saint-gobain.com/news/choosing-best-cmp-slurry" rel="nofollow">CMP slurries</a>)</li>
+<li><a href="https://en.wikipedia.org/wiki/Photomask" rel="nofollow">Photomasks</a></li>
+<li>Wafer handling equipment, dicing</li>
+<li><a href="https://www.microwavejournal.com/articles/21140-rf-technology-in-semiconductor-wafer-processing" rel="nofollow">RF Generators</a><br>
+![[materials-small.png]]</li>
+</ul>
+<h3><strong>Wafer Fab Equipment (WFE) Make the Chips</strong></h3>
+<ul>
+<li>These machines physically manufacture the chips</li>
+<li>Five companies dominate the industry– <a href="https://www.appliedmaterials.com/" rel="nofollow">Applied Materials</a>, <a href="https://www.kla.com/" rel="nofollow">KLA</a>, <a href="https://www.lamresearch.com/" rel="nofollow">LAM</a>, <a href="https://www.tel.com/" rel="nofollow">Tokyo Electron</a> and <a href="https://www.asml.com/en" rel="nofollow">ASML</a></li>
+<li>These are some of the most complicated (and expensive) machines on Earth. They take a slice of an ingot of silicon and manipulate its atoms on and below its surface</li>
+<li>We’ll explain how these machines are used a bit later on<br>
+![[Wafer-Fab-Equipment.png]]</li>
+</ul>
+<h3> <strong>“Fabless” Chip Companies</strong></h3>
+<ul>
+<li>Systems companies (Apple, Qualcomm, Nvidia, Amazon, Facebook, etc.) that previously used off-the-shelf chips now design their own chips.</li>
+<li>They create chip designs (using IP Cores and their own designs) and send the designs to “foundries” that have “fabs” that manufacture them</li>
+<li>They may use the chips exclusively in their own devices e.g. Apple, Google, Amazon ….</li>
+<li>Or they may sell the chips to everyone e.g. AMD, Nvidia, Qualcomm, Broadcom…</li>
+<li>They do not own Wafer Fab Equipment or use specialized materials or chemicals</li>
+<li>They do use Chip IP and Electronic Design Software to design the chips<br>
+![[fabless.png]]</li>
+</ul>
+<h3><strong>Integrated Device Manufacturers (IDMs)</strong></h3>
+<ul>
+<li>Integrated Device Manufacturers (IDMs) design, manufacture (in their own fabs), and sell <em>their own</em> chips
+<ul>
+<li>They do not make chips for other companies (this is changing rapidly – see <a href="https://stratechery.com/2022/the-intel-split/" rel="nofollow">here</a>.)</li>
+<li>There are three categories of IDMs– Memory (e.g. <a href="https://www.micron.com/" rel="nofollow">Micron</a>, <a href="https://product.skhynix.com/home.go" rel="nofollow">SK Hynix</a>), Logic (e.g. <a href="http://www.intel.com/" rel="nofollow">Intel</a>), Analog (<a href="https://www.ti.com/" rel="nofollow">TI</a>, <a href="https://www.analog.com/en/index.html" rel="nofollow">Analog Devices</a>)</li>
+</ul>
+</li>
+<li>They have their own “fabs” but may also use foundries
+<ul>
+<li>They use Chip IP and Electronic Design Software to design their chips</li>
+<li>They buy Wafer Fab Equipment and use specialized materials and chemicals</li>
+</ul>
+</li>
+<li>The average cost of taping out a new leading-edge chip (3nm) is now $500 million<br>
+![[IDMs.png]]</li>
+</ul>
+<h3> <strong>Chip Foundries</strong></h3>
+<ul>
+<li>Foundries make chips for others in their “fabs”</li>
+<li>They buy and integrate equipment from a variety of manufacturers
+<ul>
+<li>Wafer Fab Equipment and specialized materials and chemicals</li>
+</ul>
+</li>
+<li>They design unique processes using this equipment to <em>make</em> the chips</li>
+<li>But they <em>don’t design chips</em></li>
+<li><a href="https://www.tsmc.com/english" rel="nofollow">TSMC</a> in Taiwan is the leader in logic, <a href="https://www.samsung.com/semiconductor/" rel="nofollow">Samsung</a> is second</li>
+<li>Other fabs specialize in making chips for analog, power, rf, displays, secure military, etc.</li>
+<li>It costs $20 billon to build a new generation chip (3nm) fabrication plant<br>
+![[foundries.png]]</li>
+</ul>
+<h4><strong>Fabs</strong></h4>
+<ul>
+<li>Fabs are short for fabrication plants – the factory that makes chips</li>
+<li>Integrated Device Manufacturers (IDMs) <em>and</em> Foundries both have fabs. The only difference is whether they make chips for others to use or sell or make them for themselves to sell.</li>
+<li>Think of a Fab as analogous to a book printing plant (see figure below)</li>
+</ul>
+<ol>
+<li>Just as an author writes a book using a word processor, an engineer designs a chip using electronic design automation tools</li>
+<li>An author contracts with a publisher who specializes in their genre and then sends the text to a printing plant. An engineer selects a fab appropriate for their type of chip (memory, logic, RF, analog)</li>
+<li>The printing plant buys paper and ink. A fab buys raw materials; silicon, chemicals, gases</li>
+<li>The printing plant buys printing machinery, presses, binders, trimmers. The fab buys wafer fab equipment, etchers, deposition, lithography, testers, packaging</li>
+<li>The printing process for a book uses offset lithography, filming, stripping, blueprints, plate making, binding and trimming. Chips are manufactured in a complicated process manipulating atoms using etchers, deposition, lithography. Think of it as an atomic level offset printing. The wafers are then cut up and the chips are packaged</li>
+<li>The plant turns out millions of copies of the same book. The plant turns out millions of copies of the same chip<br>
+![[printing.png]]<br>
+While this sounds simple, it’s not. Chips are probably the most complicated products ever manufactured.  The diagram below is a simplified version of the <em>1000+</em> steps it takes to make a chip.<br>
+![[Chip-fab-steps.png]]</li>
+</ol>
+<h3>Outsourced Semiconductor Assembly and Test (OSAT)</h3>
+<ul>
+<li>Companies that package and test chips made by foundries and IDMs</li>
+<li>OSAT companies take the wafer made by foundries, dice (cut) them up into individual chips, test them and then package them and ship them to the customer<br>
+![[OSAT.png]]</li>
+</ul>
+<h2><strong>Fab Issues</strong></h2>
+<ul>
+<li>As chips have become denser (with trillions of transistors on a single wafer) the cost of building fabs have skyrocketed – now &gt;$10 billion for one chip factory</li>
+<li>One reason is that the cost of the equipment needed to make the chips has skyrocketed
+<ul>
+<li>Just one advanced lithography machine from <a href="https://www.asml.com/en" rel="nofollow">ASML</a>, a Dutch company, costs $150 million</li>
+<li>There are ~500+ machines in a fab (not all as expensive as ASML)</li>
+<li>The fab building is incredibly complex. The clean room where the chips are made is just the tip of the iceberg of a complex set of plumbing feeding gases, power, liquids all at the right time and temperature into the wafer fab equipment</li>
+</ul>
+</li>
+<li>The multi-billion-dollar cost of staying at the leading edge has meant most companies have dropped out. In 2001 there were 17 companies making the most advanced chips.  Today there are only two – <a href="https://www.samsung.com/semiconductor/" rel="nofollow">Samsung</a> in Korea and <a href="https://www.tsmc.com/english" rel="nofollow">TSMC</a> in Taiwan.
+<ul>
+<li>Given that China believes Taiwan is a province of China this could be problematic for the West.<br>
+![[companies-at-leading-edge.png]]</li>
+</ul>
+</li>
+</ul>
+<h2><strong>What’s Next – Technology</strong></h2>
+<p>It’s getting much harder to build chips that are denser, faster, and use less power, so what’s next?</p>
+<ul>
+<li>Instead of making a single processor do all the work, logic chip designers have put multiple specialized processors inside of a chip</li>
+<li>Memory chips are now made denser by stacking them 100+ layers high</li>
+<li>As chips are getting more complex to design, which means larger design teams, and longer time to market, Electronic Design Automation companies are embedding artificial intelligence to automate parts of the design process</li>
+<li>Wafer equipment manufacturers are designing new equipment to help fabs make chips with lower power, better <a href="https://drive.google.com/file/d/10iOkW6LfURNLND8z61eXbDx_Y-8jkBRr/view?usp=sharing" rel="nofollow">performance, optimum area-to-cost, and faster time to market</a></li>
+</ul>
+<h2><strong>What’s Next – Business</strong></h2>
+<p>The business model of Integrated Device Manufacturers (IDMs) like <a href="http://www.intel.com/" rel="nofollow">Intel</a> is rapidly changing. In the past there was a huge competitive advantage in being vertically integrated i.e. having your own design tools and fabs. Today, it’s a disadvantage.</p>
+<ul>
+<li>Foundries have economies of scale and standardization. Rather than having to invent it all themselves, they can utilize the entire stack of innovation in the ecosystem. And just focus on manufacturing</li>
+<li><a href="https://www.amd.com/en" rel="nofollow">AMD</a> has proven that it’s possible to shift from an IDM to a fabless foundry model. <a href="http://www.intel.com/" rel="nofollow">Intel</a> is trying. They are going to use <a href="https://www.tsmc.com/english" rel="nofollow">TSMC</a> as a foundry for their own chips as well as set up their own foundry</li>
+</ul>
+<h2><strong>What’s Next – Geopolitics</strong></h2>
+<p>Controlling advanced chip manufacturing in the 21st century may well prove to be like controlling the oil supply in the 20th. The country that controls this manufacturing can throttle the military and economic power of others.</p>
+<ul>
+<li>Ensuring a steady supply of chips has become a national priority. (China’s largest import by $’s are semiconductors – larger than oil)</li>
+<li>Today, both the U.S. and <a href="https://www.semiconductors.org/chinas-share-of-global-chip-sales-now-surpasses-taiwan-closing-in-on-europe-and-japan/" rel="nofollow">China</a> are rapidly trying to decouple their semiconductor ecosystems from each other; China is pouring $100+ billion of government incentives in building Chinese fabs, while simultaneously trying to create indigenous supplies of wafer fab equipment and electronic design automation software</li>
+<li>Over the last few decades the U.S. moved most of its fabs to Asia. Today we are incentivizing bringing fabs and chip production back to the U.S.<br>
+An industry that previously was only of interest to technologists is now one of the largest pieces in great power competition.</li>
+</ul>
+<blockquote>
+<p><a href="https://steveblank.com/2022/01/25/the-semiconductor-ecosystem/" rel="nofollow">Steve Blank The Semiconductor Ecosystem – Explained</a></p>
+</blockquote></div>
+<div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://hyfaust.github.io">Faust's Archive  </a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("01/12/2025"!=""){
+    var startSite=new Date("01/12/2025");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","hyfaust/hyfaust.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>
+
+</html>
