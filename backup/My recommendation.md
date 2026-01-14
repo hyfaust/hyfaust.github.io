@@ -3,6 +3,7 @@
 
 ## 📝 Article
 - [如此努力的苏联，为什么还是输掉了与美国的“芯片冷战”](https://mp.weixin.qq.com/s?__biz=MzkwNTUwMzYzMQ==&mid=2247491850&idx=1&sn=d4a29f4e0fe402165c9bc64245b3e960&source=41&poc_token=HM98Lmmj78EZ_L4E0clp1JIGpt8TWBjDM5jmetny)
+- [Eleven lessons learned about blogging, so far](https://pmarchive.com/11_lessons_learned_about_blogging.html)
 
 ## 📖 Book&Tutorial
 

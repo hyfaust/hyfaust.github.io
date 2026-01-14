@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Faust's Archive  </title><link>https://hyfaust.github.io</link><description>As I trashed all yesterdays, my step becomes lighter。</description><copyright>Faust's Archive  </copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/247273453?s=96&amp;v=4</url><title>avatar</title><link>https://hyfaust.github.io</link></image><lastBuildDate>Wed, 14 Jan 2026 01:03:29 +0000</lastBuildDate><managingEditor>Faust's Archive  </managingEditor><ttl>60</ttl><webMaster>Faust's Archive  </webMaster><item><title>The semiconductor Ecosystem</title><link>https://hyfaust.github.io/post/The%20semiconductor%20Ecosystem.html</link><description>#semiconductor
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Faust's Archive  </title><link>https://hyfaust.github.io</link><description>As I trashed all yesterdays, my step becomes lighter。</description><copyright>Faust's Archive  </copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/247273453?s=96&amp;v=4</url><title>avatar</title><link>https://hyfaust.github.io</link></image><lastBuildDate>Wed, 14 Jan 2026 01:04:33 +0000</lastBuildDate><managingEditor>Faust's Archive  </managingEditor><ttl>60</ttl><webMaster>Faust's Archive  </webMaster><item><title>The semiconductor Ecosystem</title><link>https://hyfaust.github.io/post/The%20semiconductor%20Ecosystem.html</link><description>#semiconductor
 ![[emi-ecosystem-detail.png|400]]
 ## **The Semiconductor Ecosystem**
 Looking at the figure below, the industry seems pretty simple. Companies in the semiconductor ecosystem make chips (the triangle on the left) and sell them to companies and government agencies (on the right). Those companies and government agencies then design the chips into systems and devices (e.g. iPhones, PCs, airplanes, cloud computing, etc.), and sell them to consumers, businesses, and governments. The revenue of products that contain chips is worth tens of trillions of dollars.
@@ -222,6 +222,7 @@ E:\ProgramData\Miniconda3\python.exe E:\ProgramData\Miniconda3\cwp.py E:\Program
 
 ## 📝 Article
 - [如此努力的苏联，为什么还是输掉了与美国的“芯片冷战”](https://mp.weixin.qq.com/s?__biz=MzkwNTUwMzYzMQ==&amp;mid=2247491850&amp;idx=1&amp;sn=d4a29f4e0fe402165c9bc64245b3e960&amp;source=41&amp;poc_token=HM98Lmmj78EZ_L4E0clp1JIGpt8TWBjDM5jmetny)
+- [Eleven lessons learned about blogging, so far](https://pmarchive.com/11_lessons_learned_about_blogging.html)
 
 ## 📖 Book&amp;Tutorial
 
