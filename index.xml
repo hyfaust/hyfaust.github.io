@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Project</title>
+    <link>https://example.org/</link>
+    <description>Recent content on My New Hugo Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 25 May 2026 21:47:24 +0800</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://example.org/posts/test/</link>
+      <pubDate>Mon, 25 May 2026 21:47:24 +0800</pubDate>
+      
+      <guid>https://example.org/posts/test/</guid>
+      
+      <description>&lt;p&gt;post test&lt;/p&gt;
+&lt;div class=&#34;two-col&#34;&gt;
+     &lt;div&gt;
+       &lt;h3&gt;左栏标题&lt;/h3&gt;
+       &lt;p&gt;这里放左侧内容，比如正文、图片、代码块。&lt;/p&gt;
+     &lt;/div&gt;
+     &lt;div&gt;
+       &lt;h3&gt;右栏标题&lt;/h3&gt;
+       &lt;p&gt;这里放右侧内容，比如补充说明、表格、备注。&lt;/p&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>20260525</title>
+      <link>https://example.org/tils/20260525/</link>
+      <pubDate>Mon, 25 May 2026 21:46:31 +0800</pubDate>
+      
+      <guid>https://example.org/tils/20260525/</guid>
+      
+      <description>&lt;p&gt;Just a test&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://example.org/pages/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/pages/about/</guid>
+      
+      <description>&lt;p&gt;📧 My email: &lt;a href=&#34;mailto:hyfaust@163.com&#34;&gt;hyfaust@163.com&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;tags说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TIL: Today I learned, 记录当日所见&lt;/li&gt;
+&lt;li&gt;Column: 专题文章&lt;/li&gt;
+&lt;li&gt;Annotation: 文章的翻译、注解、评价或摘录&lt;/li&gt;
+&lt;li&gt;Casual: 字面含义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Friendship Links</title>
+      <link>https://example.org/pages/link/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.org/pages/link/</guid>
+      
+      <description>&lt;h2 id=&#34;interesting-project&#34;&gt;Interesting Project&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://seanwong17.github.io/Future-Style-Periodic-Table/&#34;&gt;元素周期表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyfaust.github.io/RulerAndCompass/default.html&#34;&gt;尺规作图&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;my-project&#34;&gt;My Project&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hyfaust.github.io/turing-learn/&#34;&gt;图灵机模拟&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;组图工具：&lt;a href=&#34;https://github.com/hyfaust/py-img-compose&#34;&gt;py-img-compose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;图片裁剪工具：&lt;a href=&#34;https://github.com/hyfaust/rm-img-border&#34;&gt;rm-img-border&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Surface Evolver 文档中文翻译及页面优化：&lt;a href=&#34;https://github.com/hyfaust/Surface-Evolver-Documents_zh&#34;&gt;Surface-Evolver-Documents_zh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用便携介质进行多端同步的工具：&lt;a href=&#34;https://github.com/hyfaust/USB-Sync&#34;&gt;USB-Sync&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;基于&lt;a href=&#34;https://github.com/Rphone/zotero-tab-enhance&#34;&gt;Rphone/zotero-tab-enhance&lt;/a&gt;二次开发的Zotero标签页增强插件&lt;a href=&#34;https://github.com/hyfaust/zotero-tab-enhance&#34;&gt;hyfaust/zotero-tab-enhance&lt;/a&gt;，添加了一键收集、多选等功能，实施了一系列性能改进。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;awesome&#34;&gt;Awesome&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Grothendieck相关：&lt;a href=&#34;https://github.com/hyfaust/agrothendieck.github.io&#34;&gt;LINK1&lt;/a&gt;， &lt;a href=&#34;https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/&#34;&gt;Grothendieck Circle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kenbrakke.com/default.htm&#34;&gt;Ken Brakke&amp;rsquo;s Home Page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tysunseven.github.io/&#34;&gt;孙天阳的个人主页&lt;/a&gt;，提供一些数学相关的资料。&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

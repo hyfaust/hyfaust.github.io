@@ -1,0 +1,26 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - draft == true
+    order:
+      - file.name
+      - title
+      - file.folder
+      - tags
+      - categories
+      - file.ctime
+      - draft
+    sort:
+      - property: file.ctime
+        direction: DESC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.title: 112
+      file.folder: 171
+      note.tags: 148
+      note.categories: 135
+      file.ctime: 149
+      note.draft: 68
